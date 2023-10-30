@@ -3,12 +3,10 @@
 : Github Repository : https://github.com/vanillaPenguin/RaspberryPi.git
                       -> includes : .udeb file for openssh-server
 
-------------0. 문제------------
+------------0. 주제------------
 
-* 상황 : USB를 통해 lrz를 이용한 통신 문제
-* 목표 : 조사와 함께 문제 해결 방법 도출
-
-* 추가 문제 : 유/무선 통신을 위한 실습 중, wi와 dhcpcd가 설치되지 않음
+* PC와 RaspberryPi 와의 가장 효율적 연결 방법에 대한 고찰
+* RaspberryPi 와 PC의 USB포트를 통한 연결이 고르지 못함
 
 ------------1. 개요------------
 
