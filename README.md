@@ -13,20 +13,9 @@
 
 # 1. Git
 
-### Github Token
-```
-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
-```
-
 ### Github Clone Code
 ```
 https://github.com/vanillaPenguin/RaspberryPi.git
-```
-
-### Github Clone With Token
-Clone시에 토큰을 넣어 권한을 함께 가져온다  
-```bash
-$ git clone https://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@github.com/vanillaPenguin/RaspberryPi.git
 ```
 > **Github 레포지토리 사용법**
 > 1. 로컬에서 사용할 Repository를 Clone해 온다 (Token과 함께 Clone 하면 편하다)
