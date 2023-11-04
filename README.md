@@ -16,7 +16,7 @@
 https://github.com/vanillaPenguin/RaspberryPi.git
 ```
 
-# 1. SSH - Raspberry Pi
+# 1. SSH
 * 라즈베리 파이는 부팅과 동시에 연결 가능한 네트워크를 찾고, 연결한다.
 > **라즈베리 파이를 wifi에 연결할 수 없는 경우**
 > 1. 다음의 코드를 실행하여 현재 사용 가능한 네트워크의 목록을 확인할 수 있다.
@@ -47,7 +47,7 @@ $ ssh pi@[RaspberryPi_IP]
 >    ```
 >    
 
-# 2. 라즈베리 파이 사용이 끝났다면
+# 2. Raspberry Pi 사용이 끝났다면
 * 다음과 같은 코드를 실행해서 라즈베리 파이를 올바르게 종료할 수 있다.
   이는 `# sudo shutdown -h now`와 같다.
   ```bash
