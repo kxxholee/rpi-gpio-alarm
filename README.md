@@ -15,7 +15,12 @@
 
 ### Github Clone Code
 ```
-https://github.com/vanillaPenguin/RaspberryPi.git
+$ git clone https://github.com/vanillaPenguin/RaspberryPi.git
+```
+Token과 Clone하면 push등을 할때 상당히 편해진다.  
+`https://`와 `github.com`사이에 토큰을 넣고 `@`을 마지막에 붙여 줄 수 있다
+```
+$ git clone https://[ TOKEN ]@github.com/vanillaPenguin/RaspberryPi.git
 ```
 > **Github 레포지토리 사용법**
 > 1. 로컬에서 사용할 Repository를 Clone해 온다 (Token과 함께 Clone 하면 편하다)
