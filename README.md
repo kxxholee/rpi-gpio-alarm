@@ -11,6 +11,11 @@
 * OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
 * Version : RaspberryPi 4 - Model B
 
+### Github Token
+```
+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
+```
+
 ### Github Clone Code
 ```
 https://github.com/vanillaPenguin/RaspberryPi.git
