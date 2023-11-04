@@ -13,7 +13,7 @@
 
 ### Github Token
 ```
-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
+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
 ```
 
 ### Github Clone Code
