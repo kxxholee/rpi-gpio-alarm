@@ -23,7 +23,7 @@ https://github.com/vanillaPenguin/RaspberryPi.git
 >    ```bash
 >    # nmcli device wifi list
 >    ```
-> 2. 사용 가능한 네트워크가 있다면, 다음의 코드를 통해 연결할 수 있다.
+> 2. 사용 가능한 네트워크가 있다면, 다음의 코드를 통해 연결할 수 있다.  
 >    이때, SSID가 와이파이 이름, PASSWORD가 비번이다.
 >    ```bash
 >    # nmcli device wifi connect [SSID] password [PASSWORD]
@@ -40,7 +40,7 @@ $ ssh pi@raspberrypi.local
 $ ssh pi@[RaspberryPi_IP]
 ```
 > **라즈베리 파이의 IP를 모르겠다면?**
-> * 다음의 코드를 실행해서 IP를 알아낼 수 있다.
+> * 다음의 코드를 실행해서 IP를 알아낼 수 있다.  
 >   이때 inet 옆에 xxx.xx.x.xx/xx 이런식으로 되어 있을 텐데, `/`가 나오기 이전까지가 ip 주소이다.
 >    ```bash
 >    # ip a
