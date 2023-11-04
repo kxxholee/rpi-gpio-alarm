@@ -11,6 +11,24 @@
 * OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
 * Version : RaspberryPi 4 - Model B
 
+### Repository Info
+> .
+> ├── InstallFiles
+> │   └── libc6-udeb_2.36-9+deb12u3_arm64.udeb
+> ├── Memo
+> │   └── README.md
+> ├── README.md
+> └── SourceCode
+>     ├── Makefile
+>     ├── README.md
+>     └── week10
+>         ├── seg_driver.c
+>         ├── seg_example2.c
+>         └── seg_example.c
+> 
+> 4 directories, 8 files
+> 
+
 # 1. Git
 
 ### Github Clone Code
