@@ -11,6 +11,8 @@
 * OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
 * Version : RaspberryPi 4 - Model B
 
+# 1. Git
+
 ### Github Token
 ```
 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
@@ -21,7 +23,33 @@ github_pat_11AZTOG4A04Y1SKUcgtdBT_dnAjbjEWkjSRucf11TRWsA1G4wE27v28fFrkNdCixZ4BPB
 https://github.com/vanillaPenguin/RaspberryPi.git
 ```
 
-# 1. SSH
+### Github Clone With Token
+Clone시에 토큰을 넣어 권한을 함께 가져온다  
+```bash
+$ git clone https://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@github.com/vanillaPenguin/RaspberryPi.git
+```
+> **Github 레포지토리 사용법**
+> 1. 로컬에서 사용할 Repository를 Clone해 온다 (Token과 함께 Clone 하면 편하다)
+> 2. 내용을 내 입맛에 맞게 수정한다 (파일 생성 및 삭제, 수정 등)
+> 3. 변경 상태를 Staging Area에 저장해 준다.
+>    * Staging Area 란 변경된 내용들이 Commit되기 이전 대기 상태에 들어가는 것을 말한다
+>    ```bash
+>    $ git add [Directory or File path]
+>    ```
+> 4. 변경 내용 (Staging Area에 있는 내용)을 메세지와 함께 Commit한다.
+>     * 이때 커밋된 메세지는 레포지토리에 남아서, 수정된 내용들에 대해 붙어서 따라다닌다
+>    ```bash
+>    $ git commit -m "message"
+>    ```
+> 5. 변경 내용 업로드
+>    * 제공된 토큰은 아마 줄 수 있는 모든 권한이 부여된 상태일 것이므로, main브랜치에 바로 push가 가능하다.
+>    * 따라서 변경 내용을 push할 때 반드시 내용이 올바른지, 잘못 건드린 것은 없는지 확인해야 한다.
+>    ```bash
+>    $ git push
+>    ```
+>    
+
+# 2. SSH
 * 라즈베리 파이는 부팅과 동시에 연결 가능한 네트워크를 찾고, 연결한다.
 > **라즈베리 파이를 wifi에 연결할 수 없는 경우**
 > 1. 다음의 코드를 실행하여 현재 사용 가능한 네트워크의 목록을 확인할 수 있다.
@@ -52,7 +80,7 @@ $ ssh pi@[RaspberryPi_IP]
 >    ```
 >    
 
-# 2. Raspberry Pi 사용이 끝났다면
+# 3. Raspberry Pi 사용이 끝났다면
 * 다음과 같은 코드를 실행해서 라즈베리 파이를 올바르게 종료할 수 있다.
   이는 `# sudo shutdown -h now`와 같다.
   ```bash
