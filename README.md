@@ -8,8 +8,8 @@
 >   202014122 김진구
 
 ### Raspberry Pi Info
-* OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
-* Version : RaspberryPi 4 - Model B
+🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
+🌱 Version : RaspberryPi 4 - Model B  
 
 ### Repository Info
 ```
