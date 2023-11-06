@@ -14,6 +14,7 @@
 ### Repository Info
 ```
 .
+├── BeginnersGuide-4thEd-Eng_v2.pdf
 ├── InstallFiles
 │   └── libc6-udeb_2.36-9+deb12u3_arm64.udeb
 ├── Memo
@@ -22,12 +23,20 @@
 └── SourceCode
     ├── Makefile
     ├── README.md
+    ├── week07
+    │   ├── button_mmap
+    │   ├── button_mmap.c
+    │   ├── keyboard_mmap
+    │   ├── keyboard_mmap.c
+    │   ├── led_mmap
+    │   └── led_mmap.c
     └── week10
         ├── seg_driver.c
         ├── seg_example2.c
-        └── seg_example.c
+        ├── seg_example.c
+        └── test.png
 
-4 directories, 8 files
+5 directories, 16 files
 ```
 
 # 1. Git
