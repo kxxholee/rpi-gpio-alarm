@@ -1,1 +1,0 @@
-cmd_/home/vnla/Workbench/RaspberryPi/SourceCode/week10/modules.order := {   echo /home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.ko; :; } | awk '!x[$$0]++' - > /home/vnla/Workbench/RaspberryPi/SourceCode/week10/modules.order

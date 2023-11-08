@@ -1,1 +1,0 @@
-cmd_/home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.ko := arm-linux-gnueabihf-ld -r -EL -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.ko /home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.o /home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.mod.o;  true

@@ -1,1 +1,0 @@
-cmd_/home/vnla/Workbench/RaspberryPi/SourceCode/week10/Module.symvers := sed 's/ko$$/o/' /home/vnla/Workbench/RaspberryPi/SourceCode/week10/modules.order | scripts/mod/modpost -m -a  -o /home/vnla/Workbench/RaspberryPi/SourceCode/week10/Module.symvers -e -i Module.symvers   -T -
