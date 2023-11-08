@@ -1,0 +1,1 @@
+cmd_/home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.mod := printf '%s\n'   seg_driver.o | awk '!x[$$0]++ { print("/home/vnla/Workbench/RaspberryPi/SourceCode/week10/"$$0) }' > /home/vnla/Workbench/RaspberryPi/SourceCode/week10/seg_driver.mod

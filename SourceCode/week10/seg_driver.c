@@ -1,9 +1,9 @@
-#include <linux/kernel.h>
 #include <linux/module.h>
+#include <linux/init.h>
 #include <linux/fs.h>
+#include <linux/cdev.h>
 #include <linux/uaccess.h>
 #include <linux/gpio.h>
-#include <linux/delay.h>
 
 // Module Information 
 MODULE_LICENSE("GPL");
@@ -20,93 +20,93 @@ static struct cdev my_device;
 /**
 * @brief Write Data to buffer
 */
-static ssize_t driver_write(struct file *File, const char *user_buffer, size_t count, ioff_t *offs) {
+static ssize_t driver_write(struct file *File, const char *user_buffer, size_t count, loff_t *offs) {
     int to_copy, not_copied, delta;
     unsigned short value = 0;
 
     to_copy = min(count, sizeof(value));
-    mto_copied = copy_from_user(&value, user_buffer, to_copy);
+    not_copied = copy_from_user(&value, user_buffer, to_copy);
 
     /* Setting the segments LED */
     if (value & (1 << 0)) {
-        gpio_get_value(2, 1);
+        gpio_set_value(2, 1);
     }
     else {
         gpio_set_value(2, 0);
     }
 
     if (value & (1 << 1)) {
-        gpio_get_value(3, 1);
+        gpio_set_value(3, 1);
     }
     else {
         gpio_set_value(3, 0);
     }
 
     if (value & (1 << 2)) {
-        gpio_get_value(4, 1);
+        gpio_set_value(4, 1);
     }
     else {
         gpio_set_value(4, 0);
     }
 
     if (value & (1 << 3)) {
-        gpio_get_value(17, 1);
+        gpio_set_value(17, 1);
     }
     else {
         gpio_set_value(17, 0);
     }
 
     if (value & (1 << 4)) {
-        gpio_get_value(21, 1);
+        gpio_set_value(21, 1);
     }
     else {
         gpio_set_value(21, 0);
     }
 
     if (value & (1 << 5)) {
-        gpio_get_value(20, 1);
+        gpio_set_value(20, 1);
     }
     else {
         gpio_set_value(20, 0);
     }
 
     if (value & (1 << 6)) {
-        gpio_get_value(16, 1);
+        gpio_set_value(16, 1);
     }
     else {
         gpio_set_value(16, 0);
     }
 
     if (value & (1 << 7)) {
-        gpio_get_value(12, 1);
+        gpio_set_value(12, 1);
     }
     else {
         gpio_set_value(12, 0);
     }
 
     if (value & (1 << 8)) {
-        gpio_get_value(7, 1);
+        gpio_set_value(7, 1);
     }
     else {
         gpio_set_value(7, 0);
     }
 
     if (value & (1 << 9)) {
-        gpio_get_value(8, 1);
+        gpio_set_value(8, 1);
     }
     else {
         gpio_set_value(8, 0);
     }
 
     if (value & (1 << 10)) {
-        gpio_get_value(25, 1);
+        gpio_set_value(25, 1);
     }
     else {
         gpio_set_value(25, 0);
     }
 
     if (value & (1 << 11)) {
-        gpio_get_value(24, 1);
+        gpio_set_value(24, 1);
     }
     else {
         gpio_set_value(24, 0);
@@ -114,7 +114,7 @@ static ssize_t driver_write(struct file *File, const char *user_buffer, size_t c
 
     /* Calculate data */
     delta = to_copy - not_copied;
-    return data;
+    return delta;
 }
 
 /**
@@ -149,7 +149,7 @@ static int __init ModuleInit(void) {
 
     /* Allocate a device nr */
     if (alloc_chrdev_region(&my_device_nr, 0, 1, DRIVER_NAME) < 0) {
-        printk("Device Nr. could not be allocated!\n")
+        printk("Device Nr. could not be allocated!\n");
         return -1;
     }
     printk("read_write - Device Nr. Major: %d, Minor: %d was registered!\n", my_device_nr >> 20, my_device_nr && 0xfffff);
