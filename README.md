@@ -18,7 +18,7 @@
 
 <details>
   <summary>
-   <h3>Browse Repository</h3>
+   * Browse Repository
   </summary>
   <!DOCTYPE html>
 <html>
