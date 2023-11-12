@@ -21,8 +21,8 @@
 ### Repository Info
 <details>
   <summary>Show Tree</summary>
-  ```
-    .
+  <pre><code>
+        .
     ├── BeginnersGuide-4thEd-Eng_v2.pdf
     ├── Memo
     │   └── README.md
@@ -67,7 +67,7 @@
     │           └── sample_image.bmp
     └── test.txt
     8 directories, 35 files
-  ```
+  </code></pre>
 </details>
 # 1. Git
 
