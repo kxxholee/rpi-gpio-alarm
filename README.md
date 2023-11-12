@@ -10,35 +10,58 @@
 ### Raspberry Pi Info
 - 🍓 Raspberry Pi *(neofetch)*
   ![neofetch.png](./.readme-images/neofetch.png)
-- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
-- 🌱 Version : RaspberryPi 4 - Model B  
+- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)
+- 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)
+- 🌱 Board Version : RaspberryPi 4 - Model B  
 
 ### Repository Info
 ```
 .
 ├── BeginnersGuide-4thEd-Eng_v2.pdf
-├── InstallFiles
-│   └── libc6-udeb_2.36-9+deb12u3_arm64.udeb
 ├── Memo
-│   └── README.md
+│   └── README.md
 ├── README.md
-└── SourceCode
-    ├── Makefile
-    ├── README.md
-    ├── week07
-    │   ├── button_mmap
-    │   ├── button_mmap.c
-    │   ├── keyboard_mmap
-    │   ├── keyboard_mmap.c
-    │   ├── led_mmap
-    │   └── led_mmap.c
-    └── week10
-        ├── seg_driver.c
-        ├── seg_example2.c
-        ├── seg_example.c
-        └── test.png
+├── SourceCode
+│   ├── CMakeLists.txt
+│   ├── Makefile
+│   ├── README.md
+│   ├── week07
+│   │   ├── button_mmap
+│   │   ├── button_mmap.c
+│   │   ├── keyboard_mmap
+│   │   ├── keyboard_mmap.c
+│   │   ├── led_mmap
+│   │   └── led_mmap.c
+│   ├── week10
+│   │   ├── Makefile
+│   │   ├── modules.order
+│   │   ├── Module.symvers
+│   │   ├── seg_driver.c
+│   │   ├── seg_driver.ko
+│   │   ├── seg_driver.mod
+│   │   ├── seg_driver.mod.c
+│   │   ├── seg_driver.mod.o
+│   │   ├── seg_driver.o
+│   │   ├── seg_example
+│   │   ├── seg_example2
+│   │   ├── seg_example2.c
+│   │   ├── seg_example.c
+│   │   ├── temp
+│   │   │   └── Makefile
+│   │   └── test.png
+│   └── week11
+│       ├── camera_example
+│       │   └── camera_example.cpp
+│       └── opencv_example
+│           ├── gray_example
+│           ├── gray_example.cpp
+│           ├── gray_image.bmp
+│           ├── install_cv4.5.1_rasbian.sh
+│           ├── Lenna.png
+│           └── sample_image.bmp
+└── test.txt
 
-5 directories, 16 files
+8 directories, 35 files
 ```
 
 # 1. Git
