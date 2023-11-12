@@ -18,7 +18,7 @@
 
 <details>
   <summary>
-    <strong>Browse Repository `*(클릭!)*`</strong>
+    <strong>Browse Repository</strong> *(클릭!)*
   </summary>
   <!DOCTYPE html>
 <html>
