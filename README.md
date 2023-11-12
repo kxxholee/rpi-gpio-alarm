@@ -16,6 +16,8 @@
 <img src=".readme-images/neofetch.png">
 </div>
 
+
+    
 <details>
   <summary>
     <strong>Browse Repository</strong>
