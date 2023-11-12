@@ -16,12 +16,9 @@
   <img src=".readme-images/neofetch.png" width="600" height="360" style="border-radius:3%;">
 </div>
 
-<!--  ![neofetch.png](./.readme-images/neofetch.png) -->
-
-### Repository Info
 <details>
   <summary>
-   <h2>Browse Repository</h2>
+   <h3>Browse Repository</h3>
   </summary>
   <!DOCTYPE html>
 <html>
