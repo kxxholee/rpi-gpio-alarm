@@ -20,7 +20,9 @@
 
 ### Repository Info
 <details>
-  <summary>Show Tree</summary>
+  <summary>
+   <h2>Browse Repository</h2>
+  </summary>
   <!DOCTYPE html>
 <html>
 <head>
