@@ -20,7 +20,7 @@
     
 <details>
   <summary>
-    <strong>Browse Repository</strong>
+    <strong>:star::star:Browse Repository (클릭!!):star::star:</strong>
   </summary>
   <!DOCTYPE html>
 <html>
