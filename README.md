@@ -17,11 +17,9 @@
 </div>
 
 <details>
-  <h1>
-		<summary>
-	   Browse Repository
-	  </summary>
-	</h1>
+  <summary>
+    <strong>Browse Repository</strong>
+  </summary>
   <!DOCTYPE html>
 <html>
 <head>
