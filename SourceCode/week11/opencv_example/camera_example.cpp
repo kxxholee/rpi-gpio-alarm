@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
   int max;
 
   if (argc > 1) {
-    max = stoi(argv[1]);
+    max = int(argv[1]);
   } else {
     max = 50;
   }
