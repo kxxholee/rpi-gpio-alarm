@@ -79,13 +79,6 @@
 8 directories, 36 files
 
 </p>
-	<hr>
-	<p class="VERSION">
-		 tree v2.0.2 © 1996 - 2022 by Steve Baker and Thomas Moore <br>
-		 HTML output hacked and copyleft © 1998 by Francesc Rocher <br>
-		 JSON output hacked and copyleft © 2014 by Florian Sesser <br>
-		 Charsets / OS/2 support © 2001 by Kyosuke Tokoro
-	</p>
 </body>
 </html>
 </details>
