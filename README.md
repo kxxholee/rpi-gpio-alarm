@@ -66,9 +66,7 @@
     │           ├── Lenna.png
     │           └── sample_image.bmp
     └── test.txt
-    
     8 directories, 35 files
-  ```
 </details>
 # 1. Git
 
