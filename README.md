@@ -12,7 +12,11 @@
 - 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)
 - 🌱 Board Version : RaspberryPi 4 - Model B  
 - 🍓 Raspberry Pi *(neofetch)*
-  ![neofetch.png](./.readme-images/neofetch.png)
+<div align="center">
+  <img src="image_url.jpg" width="500" height="300" style="border-radius:20px;">
+</div>
+
+<!--  ![neofetch.png](./.readme-images/neofetch.png) -->
 
 ### Repository Info
   ```
