@@ -13,7 +13,7 @@
 - 🌱 Board Version : RaspberryPi 4 - Model B  
 - 🍓 Raspberry Pi *(neofetch)*
 <div align="center">
-  <img src="./readme-images/neofetch.png" width="500" height="300" style="border-radius:20px;">
+  <img src="./.readme-images/neofetch.png" width="500" height="300" style="border-radius:20px;">
 </div>
 
 <!--  ![neofetch.png](./.readme-images/neofetch.png) -->
