@@ -8,6 +8,8 @@
 >   202014122 김진구
 
 ### Raspberry Pi Info
+- 🍓 Raspberry Pi *(neofetch)*
+  ![neofetch.png](./.readme-images/neofetch.png)
 - 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
 - 🌱 Version : RaspberryPi 4 - Model B  
 
