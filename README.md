@@ -19,7 +19,9 @@
 <!--  ![neofetch.png](./.readme-images/neofetch.png) -->
 
 ### Repository Info
-  ```
+<details>
+  <summary>Show Tree</summary>
+    ```
     .
     ├── BeginnersGuide-4thEd-Eng_v2.pdf
     ├── Memo
@@ -67,6 +69,7 @@
     
     8 directories, 35 files
   ```
+</details>
 
 # 1. Git
 
