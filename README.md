@@ -8,17 +8,9 @@
 >   202014122 김진구
 
 ### Raspberry Pi Info
-- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
-- 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)  
-- 🌱 Board Version : RaspberryPi 4 - Model B    
-- 🍓 Raspberry Pi *(neofetch)*  
-<div align="center">
-<img src=".readme-images/neofetch.png">
-</div>
-    
 <details>
   <summary>
-    <strong>:star::star:Browse Repository (클릭!!):star::star:</strong>
+    <strong>:star::star:Browse Repository (클릭!!)</strong>
   </summary>
   <!DOCTYPE html>
 <html>
@@ -82,8 +74,15 @@
 </p>
 </body>
 </html>
-
 </details>
+
+- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
+- 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)  
+- 🌱 Board Version : RaspberryPi 4 - Model B    
+- 🍓 Raspberry Pi *(neofetch)*  
+<div align="center">
+<img src=".readme-images/neofetch.png">
+</div>
 
 # 1. Errors
 * [week11](./SourceCode/week11/README.md)
