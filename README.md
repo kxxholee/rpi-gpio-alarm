@@ -17,9 +17,11 @@
 </div>
 
 <details>
-  <summary>
-   Browse Repository
-  </summary>
+  <h1>
+		<summary>
+	   Browse Repository
+	  </summary>
+	</h1>
   <!DOCTYPE html>
 <html>
 <head>
