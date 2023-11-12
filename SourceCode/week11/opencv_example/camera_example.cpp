@@ -1,12 +1,11 @@
-#include <cstdint>
 #include <iostream>
-#include <opencv2/core.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/imgproc.hpp>
-#include <opencv2/opencv.hpp>
-#include <opencv2/photo.hpp>
-#include <opencv2/videoio.hpp>
 #include <stdio.h>
+#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/photo.hpp>
 
 using namespace std;
 using namespace cv;
@@ -23,7 +22,11 @@ int main(int argc, char *argv[]) {
   int frame_width = cap.get(cv::CAP_PROP_FRAME_WIDTH);
   int frame_height = cap.get(cv::CAP_PROP_FRAME_HEIGHT);
 
-  VideoWriter video("outcpp.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
+  /*
+  * opencv Error -> Fixed from Stackoverflow code
+  * https://stackoverflow.com/questions/59168477/cant-find-starting-number-in-the-name-of-file-when-trying-to-read-frames-fr/68278992#68278992
+  */
+  VideoWriter video("/home/pi/working/week11/opencv_example/outcpp01.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
                     10, Size(frame_width, frame_height));
 
   printf("Open Camera\n");
@@ -32,7 +35,7 @@ int main(int argc, char *argv[]) {
   int max;
 
   if (argc > 1) {
-    max = int(argv[1]);
+    max = stoi(argv[1]);
   } else {
     max = 50;
   }
@@ -47,4 +50,6 @@ int main(int argc, char *argv[]) {
 
   cap.release();
   video.release();
+
+  return 0;
 }
