@@ -9,10 +9,10 @@
 
 ### Raspberry Pi Info
 <div>
-	- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)
-	- 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)
-	- 🌱 Board Version : RaspberryPi 4 - Model B  
-	- 🍓 Raspberry Pi *(neofetch)*
+	- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
+	- 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)  
+	- 🌱 Board Version : RaspberryPi 4 - Model B    
+	- 🍓 Raspberry Pi *(neofetch)*  
 </div>
 	<div align="center">
 	<img src=".readme-images/neofetch.png">
