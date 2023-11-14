@@ -155,26 +155,31 @@ Token과 Clone하면 push등을 할때 상당히 편해진다.
 ```
 $ git clone https://[ TOKEN ]@github.com/vanillaPenguin/RaspberryPi.git
 ```
-> **Github 레포지토리 사용법**
-> 1. 로컬에서 사용할 Repository를 Clone해 온다 (Token과 함께 Clone 하면 편하다)
-> 2. 내용을 내 입맛에 맞게 수정한다 (파일 생성 및 삭제, 수정 등)
-> 3. 변경 상태를 Staging Area에 저장해 준다.
->    * Staging Area 란 변경된 내용들이 Commit되기 이전 대기 상태에 들어가는 것을 말한다
->    ```bash
->    $ git add [Directory or File path]
->    ```
-> 4. 변경 내용 (Staging Area에 있는 내용)을 메세지와 함께 Commit한다.
->     * 이때 커밋된 메세지는 레포지토리에 남아서, 수정된 내용들에 대해 붙어서 따라다닌다
->    ```bash
->    $ git commit -m "message"
->    ```
-> 5. 변경 내용 업로드
->    * 제공된 토큰은 아마 줄 수 있는 모든 권한이 부여된 상태일 것이므로, main브랜치에 바로 push가 가능하다.
->    * 따라서 변경 내용을 push할 때 반드시 내용이 올바른지, 잘못 건드린 것은 없는지 확인해야 한다.
->    ```bash
->    $ git push
->    ```
->    
+<details>
+	<summary>
+		<strong>Github 레포지토리 사용법</strong>
+	</summary>
+	> **Github 레포지토리 사용법**
+	> 1. 로컬에서 사용할 Repository를 Clone해 온다 (Token과 함께 Clone 하면 편하다)
+	> 2. 내용을 내 입맛에 맞게 수정한다 (파일 생성 및 삭제, 수정 등)
+	> 3. 변경 상태를 Staging Area에 저장해 준다.
+	>    * Staging Area 란 변경된 내용들이 Commit되기 이전 대기 상태에 들어가는 것을 말한다
+	>    ```bash
+	>    $ git add [Directory or File path]
+	>    ```
+	> 4. 변경 내용 (Staging Area에 있는 내용)을 메세지와 함께 Commit한다.
+	>     * 이때 커밋된 메세지는 레포지토리에 남아서, 수정된 내용들에 대해 붙어서 따라다닌다
+	>    ```bash
+	>    $ git commit -m "message"
+	>    ```
+	> 5. 변경 내용 업로드
+	>    * 제공된 토큰은 아마 줄 수 있는 모든 권한이 부여된 상태일 것이므로, main브랜치에 바로 push가 가능하다.
+	>    * 따라서 변경 내용을 push할 때 반드시 내용이 올바른지, 잘못 건드린 것은 없는지 확인해야 한다.
+	>    ```bash
+	>    $ git push
+	>    ```
+	>    
+</details>
 
 # 3. SSH
 * 라즈베리 파이는 부팅과 동시에 연결 가능한 네트워크를 찾고, 연결한다.
