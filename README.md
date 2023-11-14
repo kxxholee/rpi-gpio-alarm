@@ -160,3 +160,7 @@ $ ssh pi@[RaspberryPi_IP]
   ```bash
   # sudo shutdown -h +5
   ```
+  
+  
+  
+    
