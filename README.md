@@ -207,7 +207,9 @@ $ ssh pi@[RaspberryPi_IP]
 >    ```
 >    
 
-# 4. Raspberry Pi 사용이 끝났다면
+# 4. VNC
+
+# 5. Raspberry Pi 사용이 끝났다면
 * 다음과 같은 코드를 실행해서 라즈베리 파이를 올바르게 종료할 수 있다.
   이는 `# sudo shutdown -h now`와 같다.
   ```bash
