@@ -137,9 +137,11 @@
 - 🌱 Board Version : RaspberryPi 4 - Model B    
 - 🍓 Raspberry Pi *(neofetch)*
 
-<div align="center">
-<img src=".readme-images/neofetch.png">
-</div>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./.readme-images/rasp-neofetch-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./.readme-images/rasp-neofetch-light.png">
+  <img alt="Raspberry pi neofetch" src="./.readme-images/rasp-neofetch-dark.png">
+</picture>
 
 # 1. TroubleShooting
 * *Example Errors*
