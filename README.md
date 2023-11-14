@@ -140,7 +140,7 @@
 <img src=".readme-images/neofetch.png">
 </div>
 
-# 1. Errors
+# 1. TroubleShooting
 * [week11](./SourceCode/week11/README.md)
 
 # 2. Git
