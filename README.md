@@ -141,7 +141,8 @@
 </div>
 
 # 1. TroubleShooting
-* [week11](./SourceCode/week11/README.md)
+* *Example Errors*
+	* [week11](./SourceCode/week11/README.md)
 
 # 2. Git
 
