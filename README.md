@@ -7,6 +7,12 @@
 >   201810804 김세연  
 >   202014122 김진구
 
+> [!IMPORTANT]
+> - <strong>TODO List</strong>
+> - [ ] 레포트 쓰기  
+> - [ ] 라즈베리파이 강의자료 14 - Tensorflow 실습  
+> - [ ] 텀프로젝트 주제 및 개요 정하기
+
 ### Raspberry Pi Info
 <details>
   <summary>
