@@ -20,7 +20,7 @@
  <meta name="GENERATOR" content="$Version: $ tree v2.0.2 (c) 1996 - 2022 by Steve Baker, Thomas Moore, Francesc Rocher, Florian Sesser, Kyosuke Tokoro $">
 </head>
 <body>
-	<h1>Directory Tree</h1><p>
+		<h1>Directory Tree</h1><p>
 	<a href=".">.</a><br>
 	├── <a href="./BeginnersGuide-4thEd-Eng_v2.pdf">BeginnersGuide-4thEd-Eng_v2.pdf</a><br>
 	├── <a href="./Memo/">Memo</a><br>
@@ -37,7 +37,6 @@
 	&nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week07/keyboard_mmap.c">keyboard_mmap.c</a><br>
 	&nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week07/led_mmap">led_mmap</a><br>
 	&nbsp;&nbsp;&nbsp; │   └── <a href="./SourceCode/week07/led_mmap.c">led_mmap.c</a><br>
-	&nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week09/">week09</a><br>
 	&nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week10/">week10</a><br>
 	&nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week10/Makefile">Makefile</a><br>
 	&nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week10/modules.order">modules.order</a><br>
@@ -73,6 +72,15 @@
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week12/detect.tflite">detect.tflite</a><br>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week12/install_tensorflowlite2.6.0_rasbian.sh">install_tensorflowlite2.6.0_rasbian.sh</a><br>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week12/labelmap.txt">labelmap.txt</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week12/ReportPictures/">ReportPictures</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/coco_unzip%ED%9B%84_git_clone.png">coco_unzip후_git_clone.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/coco_unzip.png">coco_unzip.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/ldconfig_&amp;_wget.png">ldconfig_&amp;_wget.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/%EA%B2%B0%EA%B3%BC%EC%82%AC%EC%A7%84%ED%99%95%EC%9D%B8.png">결과사진확인.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%EC%9A%B0_%EC%84%A4%EC%B9%98_%ED%99%95%EC%9D%B8.png">텐서플로우_설치_확인.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png">설치파일_다운로드.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/ReportPictures/%EC%84%A4%EC%B9%98%ED%8C%8C%EC%9D%BC_%EA%B6%8C%ED%95%9C%EB%B3%B4%EC%97%AC_%EB%B0%8F_%EC%8B%A4%ED%96%89.png">설치파일_권한보여_및_실행.png</a><br>
+	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   └── <a href="./SourceCode/week12/ReportPictures/%ED%8C%8C%EC%9D%B4%EC%8D%AC_%EC%BD%94%EB%93%9C%EC%8B%A4%ED%96%89.png">파이썬_코드실행.png</a><br>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <a href="./SourceCode/week12/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/">TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi</a><br>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   ├── <a href="./SourceCode/week12/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/Android/">Android</a><br>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   │   └── <a href="./SourceCode/week12/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/Android/placeholder.txt">placeholder.txt</a><br>
@@ -124,6 +132,10 @@
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; │   &nbsp;&nbsp;&nbsp; └── <a href="./SourceCode/week12/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/util_scripts/train_val_test_split.py">train_val_test_split.py</a><br>
 	&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <a href="./SourceCode/week12/tensorflow.zip">tensorflow.zip</a><br>
 <br><br><p>
+
+16 directories, 93 files
+
+</p>
 
 16 directories, 85 files
 
