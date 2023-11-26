@@ -142,10 +142,6 @@
 16 directories, 93 files
 
 </p>
-
-16 directories, 85 files
-
-</p>
 </body>
 </html>
 </details>
