@@ -651,16 +651,20 @@
             예제 1번 `seg_example.c` 에서 0x000f를 입력해 주면 이는 GPIO 2, 3, 4, 17번을 1로 바꾸어 주고, 이는 7segment의 각 자리의 On / Off를 결정하는 pin이므로, 위의 사진에서 확인할 수 있듯 각 7segment자리를 1 2 4 8에 대입했을 때, 마지막 자리가 7인 경우 1, 2, 4에 대응하는 자리의 숫자만 On인 것을 확인할 수 있다.
 
     2. 과제 구현 내용
-        - A. Source Code (segment driver $\rightarrow$ 예제에서 주어진 것과 같은 것을 사용 )
+        - A. Source Code
             - Makefile
                 ```Makefile
                 
                 ```
-            - segment
-            - button
-            ```c
+            - `seg_driver.c`
+                ```c
+                
+                ```
+            - `button_driver.c`
+                ```c
+                
+                ```
             
-            ```
         - B. Data
 
         - C. Discussion
