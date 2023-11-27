@@ -15,6 +15,16 @@
     201810804 김세연  
 
 3. **Abstract & Background**  
+    
+    이번 주차에서는 블록 디바이스에 중점을 맞추어 어떤 역할을 가지고 있고, I/O 관리에 어떤 기여를 하는지 알아보는 시간을 가진다.  
+    정리에 앞서, 지난 주차에서 디바이스 드라이버에는 다음과 같은 종류가 있음을 확인했다.
+
+    | 문자 디바이스 드라이버 | 블록 디바이스 드라이버 | 네트워크 디바이스 드라이버 |
+    |-------------------|-------------------|----------------------|
+    | * 임의길이 문자열이나 자료가 순차적으로 나열되는 장치들을 다룬다. | * 일정 크기의 버퍼(블록)를 통해 데이터를 처리한다. | * 네트워크 통신을 통해 네트워크 패킷을 송수신한다.
+    | * 버퍼 캐시를 사용하지 않으며, 사용자에게 Raw 데이터를 제공한다. | * 파일 시스템에서 관리하고 내부적인 버퍼가 있다. | |
+    | * Serial, Console, Keyboard, printer, Mouse 등 | * 하드 디스크, 램 디스크, USB Drive, CD-ROM 등 | * 이더넷, PPP 등 
+
 
     블록 디바이스 드라이버는 컴퓨터의 운영 체제에서 블록 디바이스와의 통신을 관리하는 소프트웨어의 일부이다. 여기서 "블록 디바이스"란 데이터를 블록 단위로 저장하고 검색하는 저장 장치를 의미한다. 이러한 블록 디바이스에는 하드 디스크 드라이브, CD-ROM, USB드라이브와 같은 장치들이 포함된다.  
 
@@ -25,12 +35,15 @@
 
     이외에도, 현대의 드라이버들은 비동기 I/O를 지원하는데, 이는 다른 작업을 수행하는 동안 I/O요청들을 처리할 수 있음을 의미한다. 또한 블록 디바이스 드라이버는 다양한 하드웨어와 운영 체제 간의 호환성을 제공한다.  
 
-    사용자의 어플리케이션은 파일 시스템을 통해서 블록 디바이스를 사용할 수 있고, 이 과정에 커널의 가상 파일 시스템(VFS)가 관여한다. 또한 커널의 버퍼, 페이지 캐시는 블록 디바이스에서 최근에 읽거나 작성한 데이터 부분을 저장한다.
+    사용자의 어플리케이션은 파일 시스템을 통해서 블록 디바이스를 사용할 수 있고, 이 과정에 커널의 가상 파일 시스템(VFS)가 관여한다. 또한 커널의 버퍼, 페이지 캐시는 블록 디바이스에서 최근에 읽거나 작성한 데이터 부분을 저장한다.  
+
+    이 실습에서는 7 segment를 제어하기 위한 디바이스 드라이버를 작성하고, 이를 사용하여 7segment를 제어하는 법을 배운다.
+    7segment는 7+1개의 LED를 사용해 숫자를 표시하는 GPIO장치로, 제어 포트와 입력 포트로 나누어 장치를 제어한다. 입력 포트에는 원하는 숫자를 표시하기 위한 LED를 A부터 G(혹은 DP)까지 나누어 각 LED를 점등하고, 제어 포트로 원하는 segment의 자리를 표시한다. 제어 포트의 극성에 따라 ANODE / CATHODE로 구분하는데, 이실습에서 사용하는 segment는 common anode 형태이다.
 
 4. **Experimental Results**
     1. 예제 구현 내용
         - A. Source Code
-            - **Makefile**
+            - **Makefile (Raspberry PI - gcc)**
                 ```Makefile
                 obj-m += seg_driver.o
                 KDIR = ~/working/kernel
@@ -39,6 +52,26 @@
                 RESULT2 = seg_example2
                 SRC2 = $(RESULT2).c
                 CCC = gcc
+
+                all:
+                    make -C $(KDIR) M=$(PWD) modules
+                    $(CCC) -o $(RESULT) $(SRC)
+                    $(CCC) -o $(RESULT2) $(SRC2)
+
+                clean:
+                    make -C $(KDIR) M=$(PWD) clean
+                    rm -f $(RESULT)
+                    rm -f $(RESULT2)
+                ```
+            - **Makefile (Cross-Compile - arm-linux-gnueabihf-gcc)**
+                ```Makefile
+                obj-m += seg_driver.o
+                KDIR = ~/Workbench/RaspberryPi/kernel
+                RESULT = seg_example
+                SRC = $(RESULT).c
+                RESULT2 = seg_example2
+                SRC2 = $(RESULT2).c
+                CCC = arm-linux-gnueabihf-gcc
 
                 all:
                     make -C $(KDIR) M=$(PWD) modules
@@ -601,15 +634,40 @@
 
                 <img src="./EMSYS_WEEK10_SUBDOC/10_0x00a7.jpg" alt="Seg1-Board2" width="640" height="360"/>
 
+            - `sudo ./seg_example2`
+
+                <img src="./EMSYS_WEEK10_SUBDOC/seg2-term.png" alt="Seg2-Terminal" width="640" height="360"/>
+
+                <img src="./EMSYS_WEEK10_SUBDOC/seg2-board.jpg" alt="Seg2-Board" width="640" height="360"/>
+
         - C. Discussion
-            **TODO**
-            대충 왜 사진이 저렇게 나오는지 설명해야 함
+            7-segment 드라이버의 내용을 살펴보면, 어떤 버퍼에서 들어오는 값을 받아서 이를 비트 단위로 각각 대응되는 GPIO핀에 써 내려 가는 것을 볼 수 있다.   
+            비트에 따라 다음 GPIO 핀들이 반등한다.
+            | 0 | 1 | 2 | 3  | 4  | 5  | 6  | 7  | 8 | 9 | 10 | 11 |
+            |---|---|---|----|----|----|----|----|---|---|----|----|
+            | 2 | 3 | 4 | 17 | 21 | 20 | 16 | 12 | 7 | 8 | 25 | 24 |
+
+            예를 들어, buff의 내용이 `0x0804` 였다면 이는 이진수로 `0000 1000 0000 0100` 이므로, GPIO의 4번, 12번이 켜지는 식이다.
+            예제 1번 `seg_example.c` 에서 0x000f를 입력해 주면 이는 GPIO 2, 3, 4, 17번을 1로 바꾸어 주고, 이는 7segment의 각 자리의 On / Off를 결정하는 pin이므로, 위의 사진에서 확인할 수 있듯 각 7segment자리를 1 2 4 8에 대입했을 때, 마지막 자리가 7인 경우 1, 2, 4에 대응하는 자리의 숫자만 On인 것을 확인할 수 있다.
 
     2. 과제 구현 내용
-        - A. Source Code
+        - A. Source Code (segment driver $\rightarrow$ 예제에서 주어진 것과 같은 것을 사용 )
+            - Makefile
+                ```Makefile
+                
+                ```
+            - segment
+            - button
+            ```c
+            
+            ```
         - B. Data
+
         - C. Discussion
 
-5. Conclusion
+5. Conclusion  
+지금까지의 실습과는 다르게 이 실습에서는 서로 다른 두 다바이스 드라이버를 동시에 사용하여 각 디바이스를 제어했다. 이번 실습을 통하여 임의의 실행 코드가 여러 디바이스 드라이버를 제어할 수 있음을 실습했고, 앞으로 프로젝트 등을 진행함에 있어 여러 디바이스를 라즈베리 파이 보드에 연결하여 동시에 제어하는 코드를 작성할 수 있다.  
+이전 학기 아두이노에서 했던 것과는 달리 디바이스마다 드라이버를 작성해 주어야 한다는 점에서 난이도가 있다고 볼 수 있었다. 그러나 하드웨어의 동작 방식에 대한 충분한 이해가 있다면 별다른 어려움 없이도 기기를 제어할 수 있음을 보게 되는 시간이었다.  
+예제에서 주어진 driver코드를 분석하면 앞으로 더 다양한 접근 방식으로 디바이스를 제어할 수 있을 것이다.
 
 6. References
