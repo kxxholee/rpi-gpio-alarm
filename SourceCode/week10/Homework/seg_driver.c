@@ -5,7 +5,20 @@
 #include <linux/uaccess.h>
 #include <linux/gpio.h>
 
-// Module Information 
+/**     [SEGMENT DRIVER]
+*   TODO:
+*   1. driver_write
+*   2. driver_open
+*   3. driver_close
+*   4. __init ModuleInit
+*   5. __exit ModuleExit
+*/
+
+/**
+*   PINS:       [OUT] 2, 3, 4, 17, 21, 20, 16, 12, 7, 8, 25, 24
+*   BUFBITS:          0, 1, 2,  3,  4,  5,  6,  7, 8, 9, 10, 11
+*/
+
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Johannes 4 GNU/Linux");
 MODULE_DESCRIPTION("Simple driver for 7 segments");
@@ -145,7 +158,7 @@ static struct file_operations fops = {
 * @brief This function is called, when the module is loaded into the kernel
 */
 static int __init ModuleInit(void) {
-    printk("Hello, Kernel!\n");
+    printk("Segment Module: Hello!\n");
 
     /* Allocate a device nr */
     if (alloc_chrdev_region(&my_device_nr, 0, 1, DRIVER_NAME) < 0) {
@@ -386,7 +399,7 @@ static void __exit ModuleExit(void) {
     device_destroy(my_class, my_device_nr);
     class_destroy(my_class);
     unregister_chrdev_region(my_device_nr, 1);
-    printk("Goodbye, kernel\n");
+    printk("Segment Module: Bye Bye\n");
 }
 
 module_init(ModuleInit);
