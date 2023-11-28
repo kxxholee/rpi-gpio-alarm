@@ -23,34 +23,32 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Johanes 4 GNU/Linux");
 MODULE_DESCRIPTION("Simple Driver For Button Control");
 
-static dev_t my_device nr;
+static dev_t my_device_nr;
 static struct class *my_class;
 static struct cdev my_device;
 
 #define DRIVER_NAME "my_button"
 #define DRIVER_CLASS "MyModulClass_button"
 
-unsigned char HistoryD = '0', HistoryU ='0'; // Recording the History of button state
-static size_t driver_read(struct file *file, char *user_buffer, size_t count, loff_t *offs) {
-    int not_copied, delta;
-    unsigned char ButtonUFlag = '0';
-    unsigned char ButtonDFlag = '0';
+unsigned char HistoryD = '0';
+unsigned char HistoryU = '0'; // Recording the History of button state
+unsigned char ButtonUFlag = '0';
+unsigned char ButtonDFlag = '0';
+static ssize_t driver_read(struct file *file, char *user_buffer, size_t count, loff_t *offs) {
+    int not_copied;
+    int FlagSize = min(count, sizeof(unsigned char));
 
-    int FlagSize = min(count, sizeof(unsigned char)); // 전송할 Flag의 사이즈 정하기
+    ButtonUFlag = (gpio_get_value(5) == 1) ? 'u' : '0'; // 'u' flag
+    ButtonDFlag = (gpio_get_value(6) == 1) ? 'd' : '0'; // 'd' flag
 
-    // tmp[bit 0] : GPIO 5
-    // tmp[bit 1] : GPIO 6
-    ButtonUFlag = (gpio_get_value(5) > 0) ? 'u' : '0'; // gpio pin state > 0 -> 'u' flag
-    ButtonDFlag = (gpio_get_value(6) > 0) ? 'd' : '0'; // gpio pin state > 0 -> 'd' flag
-
-    if ((ButtonUFlag != 0) && (ButtonUFlag != HistoryU)) not_copied = copy_to_user(user_buffer, &ButtonUFlag, FlagSize);
-    if ((ButtonDFlag != 0) && (ButtonDFlag != HistoryD)) not_copied = copy_to_user(user_buffer, &ButtonDFlag, FlagSize);
+    if ((ButtonUFlag == 'u') && (ButtonUFlag != HistoryU)) not_copied = copy_to_user(user_buffer, &ButtonUFlag, FlagSize);
+    if ((ButtonDFlag == 'd') && (ButtonDFlag != HistoryD)) not_copied = copy_to_user(user_buffer, &ButtonDFlag, FlagSize);
     HistoryU = ButtonUFlag; // Update UpButton History
     HistoryD = ButtonDFlag; // Update DownButton History
+    ButtonDFlag = '0';
+    ButtonUFlag = '0';
 
-    delta - FlagSize - not_copied;  // Calculate Delta
-
-    return delta;
+    return FlagSize - not_copied; // return delta
 }
 
 static int driver_open(struct inode *device_file, struct file *instance) {
@@ -69,7 +67,7 @@ static struct file_operations fops = {
     .release = driver_close,
     .read = driver_read
     // .write = driver_write
-}
+};
 
 static int __init ModuleInit(void) {
     printk("Button Module: Hello!\n");
@@ -130,7 +128,7 @@ Gpio6Error:
 AddError:
     device_destroy(my_class, my_device_nr);
 FileError:
-    classs_destroy(my_class);
+    class_destroy(my_class);
 ClassError:
     unregister_chrdev_region(my_device_nr, 1);
 
@@ -148,3 +146,5 @@ static void __exit ModuleExit(void) {
     printk("Button Module: Bye Bye\n");
 }
 
+module_init(ModuleInit);
+module_exit(ModuleExit);

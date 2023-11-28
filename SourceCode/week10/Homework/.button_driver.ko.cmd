@@ -1,0 +1,1 @@
+cmd_/home/pi/working/week10/Homework/button_driver.ko := ld -r -EL -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/pi/working/week10/Homework/button_driver.ko /home/pi/working/week10/Homework/button_driver.o /home/pi/working/week10/Homework/button_driver.mod.o;  true

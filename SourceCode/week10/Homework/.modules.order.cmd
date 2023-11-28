@@ -1,0 +1,1 @@
+cmd_/home/pi/working/week10/Homework/modules.order := {   echo /home/pi/working/week10/Homework/button_driver.ko;   echo /home/pi/working/week10/Homework/seg_driver.ko; :; } | awk '!x[$$0]++' - > /home/pi/working/week10/Homework/modules.order
