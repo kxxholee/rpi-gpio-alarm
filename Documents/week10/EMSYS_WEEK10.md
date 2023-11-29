@@ -1367,11 +1367,11 @@
 
                 <img src="./EMSYS_WEEK10_SUBDOC/HW-segButton.png" alt="HW file" width="640" height="360"/>
 
-            - **down 2회 $\rightarrow$ `9998`**
+            - **down 2회 -> `9998`**
 
                 <img src="./EMSYS_WEEK10_SUBDOC/HW-Board1.jpg" alt="HW Board1" width="640" height="360"/>
 
-            - **up 1회 $\rightarrow$ `0001`**
+            - **up 1회 -> `0001`**
                 <img src="./EMSYS_WEEK10_SUBDOC/HW-Board2.jpg" alt="HW Board2" width="640" height="360"/>
         - C. Discussion
             Segment에 대한 드라이버를 기존의 드라이버를 참고하여 seg_driver.c를 새로 작성했고, 지난 주차의 강의자료를 참고하여 버튼 드라이버 button_driver.c를 작성했다. 
