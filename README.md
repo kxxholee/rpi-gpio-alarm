@@ -13,7 +13,9 @@
 > - [X] 라즈베리파이 강의자료 14 - Tensorflow 실습  
 > - [X] 텀프로젝트 주제 및 개요 정하기
 > - [X] Tensorflow Lite Shelll Scrpit Edit (Troubleshooting)
-> - [ ] 
+> - [ ] 프로젝트 소스코드 작성 (Tensorflow Model Load)
+> - [ ] 프로젝트 소스코드 작성 (Device Drivers [0/4])
+> - [ ] 프로젝트 소스코드 작성 (main.cpp)
 
 ### Raspberry Pi Info
 <details>
