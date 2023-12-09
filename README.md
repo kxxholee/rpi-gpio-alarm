@@ -9,9 +9,11 @@
 
 > [!IMPORTANT]
 > - <strong>TODO List</strong>
-> - [ ] 레포트 쓰기  
-> - [ ] 라즈베리파이 강의자료 14 - Tensorflow 실습  
-> - [ ] 텀프로젝트 주제 및 개요 정하기
+> - [X] 레포트 쓰기  
+> - [X] 라즈베리파이 강의자료 14 - Tensorflow 실습  
+> - [X] 텀프로젝트 주제 및 개요 정하기
+> - [X] Tensorflow Lite Shelll Scrpit Edit (Troubleshooting)
+> - [ ] 
 
 ### Raspberry Pi Info
 <details>
