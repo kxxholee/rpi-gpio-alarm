@@ -34,12 +34,12 @@ make -j4
 sudo make install
 sudo ldconfig
 
-mkdir -p ~/working
-cd ~/working
-git clone https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi.git TFLite_example
-cd TFLite_example
-wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
-unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
+# mkdir -p ~/working
+# cd ~/working
+# git clone https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi.git TFLite_example
+# cd TFLite_example
+# wget https://storage.googleapis.com/download.tensorflow.org/models/tflite/coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
+# unzip coco_ssd_mobilenet_v1_1.0_quant_2018_06_29.zip
 
 version=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 
