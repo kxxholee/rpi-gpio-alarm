@@ -7,4 +7,4 @@
 RaspberryPi 보드의 `~/working/week12-1/` 경로 참고
 
 ### RaspberryPi 의 TensorflowLite와 FlatBuffers의 버전 호환성 문제
-제공된 .sh 파일을 [이 파일](./modified_tensorflow_2.6.0_install.sh)로 수정
+제공된 .sh 파일을 [이 파일](./installScript/modified_tensorflow_2.6.0_install.sh)로 수정
