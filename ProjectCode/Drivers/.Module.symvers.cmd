@@ -1,0 +1,1 @@
+cmd_/home/pi/working/ProjectCode/CTesting/Drivers/Module.symvers := sed 's/ko$$/o/' /home/pi/working/ProjectCode/CTesting/Drivers/modules.order | scripts/mod/modpost -m -a  -o /home/pi/working/ProjectCode/CTesting/Drivers/Module.symvers -e -i Module.symvers   -T -

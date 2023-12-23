@@ -1,3 +1,5 @@
+
+## 2022110965 이관호 
 * Run This .sh file to Install Tensorflow Lite Dependancies
 
 * This file is modified from the given shell script file

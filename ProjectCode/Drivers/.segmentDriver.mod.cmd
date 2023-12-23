@@ -1,0 +1,1 @@
+cmd_/home/pi/working/ProjectCode/CTesting/Drivers/segmentDriver.mod := printf '%s\n'   segmentDriver.o | awk '!x[$$0]++ { print("/home/pi/working/ProjectCode/CTesting/Drivers/"$$0) }' > /home/pi/working/ProjectCode/CTesting/Drivers/segmentDriver.mod
