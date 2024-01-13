@@ -1,4 +1,7 @@
-![RaspberryPiProject](./assets/raspberrypi.jpg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/rasptitle-dark.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/rasptitle-light.jpg">
+</picture>
 
 ------
 ### 건국대학교 전기전자공학부 - 임베디드시스템 17조
