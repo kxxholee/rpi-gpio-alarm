@@ -80,7 +80,7 @@ $ sudo shutdown -h now
 $ sudo shutdown -h +5
 ```
 
-이때, 앞서 소개했던 `now`에 대해서만 `-h` 플래그를 생략해 줄 수 있다.
+이때, 앞서 소개했던 `now`에 대해서, `-h` 플래그를 생략해 줄 수 있다.
 
 ```bash
 $ sudo shutdown now
