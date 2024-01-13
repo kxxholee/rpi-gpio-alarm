@@ -17,17 +17,11 @@
 -   <details>
       <summary>🍓 Raspberry Pi *(neofetch)*</summary>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./.assets/rasp-neofetch-dark.png">
-        <source media="(prefers-color-scheme: light)" srcset="./.assets/rasp-neofetch-light.png">
-        <img alt="Raspberry pi neofetch" src="./.assets/rasp-neofetch-dark.png">
+        <source media="(prefers-color-scheme: dark)" srcset="./assets/rasp-neofetch-dark.png">
+        <source media="(prefers-color-scheme: light)" srcset="./assets/rasp-neofetch-light.png">
+        <img alt="Raspberry pi neofetch" src="./assets/rasp-neofetch-dark.png">
       </picture>
     </details>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./.readme-images/rasp-neofetch-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./.readme-images/rasp-neofetch-light.png">
-  <img alt="Raspberry pi neofetch" src="./.readme-images/rasp-neofetch-dark.png">
-</picture>
 
 ## 1. TroubleShooting
 * *Example Errors*
