@@ -25,7 +25,7 @@
 
 ## 1. TroubleShooting
 * *Example Errors*
-	* [week11](./SourceCode/week11/README.md)
+	* [week11](./ExampleCode/week11/README.md)
 
 ## 2. Git
 
