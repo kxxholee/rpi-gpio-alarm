@@ -1,6 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/rasptitle-dark.jpg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/rasptitle-light.jpg">
+  <img alt="RaspTitle" src="./assets/rasptitle-dark.jpg">
 </picture>
 
 ------
