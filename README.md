@@ -1,23 +1,14 @@
 ![RaspberryPiProject](./assets/raspberrypi.jpg)
 
-## 0. RaspberryPi
+------
 ### 건국대학교 전기전자공학부 - 임베디드시스템 17조
+> [!NOTE]
 > * 🧑‍🏫 **담당교수**  
 >   조용범 교수님
 > * 👨‍💻 **조원**  
 >   202110965 이관호  
 >   201810804 김세연  
 >   202014122 김진구
-
-> [!IMPORTANT]
-> - <strong>TODO List</strong>
-> - [X] 레포트 쓰기  
-> - [X] 라즈베리파이 강의자료 14 - Tensorflow 실습  
-> - [X] 텀프로젝트 주제 및 개요 정하기
-> - [X] Tensorflow Lite Shelll Scrpit Edit (Troubleshooting)
-> - [ ] 프로젝트 소스코드 작성 (Tensorflow Model Load)
-> - [ ] 프로젝트 소스코드 작성 (Device Drivers [0/4])
-> - [ ] 프로젝트 소스코드 작성 (main.cpp)
 
 ### Raspberry Pi Info
 - 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
@@ -70,7 +61,7 @@ $ ssh username@device_name.local # depends on user configuration
 $ ssh username@xx.xx.xxx.xxx # ip address 
 ```
 
-> [!NOTE]
+> [!TIP]
 > * 🍓 **라즈베리 파이를 wifi에 연결할 수 없는 경우**
 > 	1. 다음의 코드를 실행하여 현재 사용 가능한 네트워크의 목록을 확인할 수 있다.
 >    		```bash
