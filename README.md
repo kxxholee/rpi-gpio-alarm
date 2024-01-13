@@ -3,29 +3,30 @@
 ------
 ### 건국대학교 전기전자공학부 - 임베디드시스템 17조
 > [!NOTE]
-> * 🧑‍🏫 **담당교수**  
->   조용범 교수님
-> * 👨‍💻 **조원**  
->   202110965 이관호  
->   201810804 김세연  
->   202014122 김진구
-
-### Raspberry Pi Info
-- 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)  
-- 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)  
-- 🌱 Board Version : RaspberryPi 4 - Model B    
--   <details>
-      <summary>🍓 Raspberry Pi *(neofetch)*</summary>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="./assets/rasp-neofetch-dark.png">
-        <source media="(prefers-color-scheme: light)" srcset="./assets/rasp-neofetch-light.png">
-        <img alt="Raspberry pi neofetch" src="./assets/rasp-neofetch-dark.png">
-      </picture>
-    </details>
+> 🧑‍🏫 **담당교수**  
+> - 조용범 교수님
+>   
+> 👨‍💻 **조원**  
+> - 202110965 이관호  
+> - 201810804 김세연  
+> - 202014122 김진구
+>   
+> 🍓 **Raspberry Pi Info**  
+> - 🔭 OS : ~~Buildroot~~ Raspbian (RaspberryPi OS)   
+> - 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)   
+> - 🌱 Board Version : RaspberryPi 4 - Model B    
+> - <details>
+> 		<summary><code> $ neofetch</code></summary>
+> 		<picture>
+> 			<source media="(prefers-color-scheme: dark)" srcset="./assets/rasp-neofetch-dark.png">
+> 			<source media="(prefers-color-scheme: light)" srcset="./assets/rasp-neofetch-light.png">
+> 			<img alt="Raspberry pi neofetch" src="./assets/rasp-neofetch-dark.png">
+> 		</picture>
+> 	</details>
 
 ## 1. TroubleShooting
-* *Example Errors*
-	* [week11](./ExampleCode/week11/README.md)
+*Example Errors*
+* [week11](./ExampleCode/week11/README.md)
 
 ## 2. Git
 
@@ -40,16 +41,16 @@ $ git clone https://[ TOKEN ]@github.com/vanillaPenguin/RaspberryPi.git
 ``` 
 
 ## 3. SSH
-* 라즈베리 파이는 부팅과 동시에 연결 가능한 네트워크를 찾고, 연결한다.
-* 이때, 라즈베리 파이가 라우터에 포트 포워딩 되어 있거나, client기기와 같은 네트워크에 연결되어 있는 경우(내부 통신이 허용된 무선 네트워크 혹은 이더넷 케이블읉 통한 연결 등 : 이하 '같은 네트워크'), 외부에서 `ssh`를 통해서 접속할 수 있다.
-* 이때, 같은 네트워크를 공유한다는 가정 하에 다음과 같은 커맨드로 연결할 수 있다. Raspberry Pi Imager를 통해 OS를 만들었다면, 그리고 사용하는 OS가 Raspberry Pi OS(혹은 Raspbian)이라면, 사용자 이름과 기기 이름은 기본값으로 각각 `pi`와 `raspberrypi`이기 때문이다. 
+라즈베리 파이는 부팅과 동시에 연결 가능한 네트워크를 찾고, 연결한다.  
+이때, 라즈베리 파이가 라우터에 포트 포워딩 되어 있거나, client기기와 같은 네트워크에 연결되어 있는 경우(내부 통신이 허용된 무선 네트워크 혹은 이더넷 케이블읉 통한 연결 등 : 이하 '같은 네트워크'), 외부에서 `ssh`를 통해서 접속할 수 있다.  
+이때, 같은 네트워크를 공유한다는 가정 하에 다음과 같은 커맨드로 연결할 수 있다. Raspberry Pi Imager를 통해 OS를 만들었다면, 그리고 사용하는 OS가 Raspberry Pi OS(혹은 Raspbian)이라면, 사용자 이름과 기기 이름은 기본값으로 각각 `pi`와 `raspberrypi`이기 때문이다.  
 
 ```bash
 $ ssh pi@raspberrypi.local # by default
 $ ssh username@device_name.local # depends on user configuration
 ```
 
-* 이때, `.local` 접미사를 통한 연결이 불가능하다면, 혹은 라우터에 포트 포워딩된 Raspberry Pi 에 연결하고자 한다면, 앞에서 `device_name.local` 을 작성해 준 부분에 다음과 같이 ip를 직접 작성해 줘야 한다.
+이때, `.local` 접미사를 통한 연결이 불가능하다면, 혹은 라우터에 포트 포워딩된 Raspberry Pi 에 연결하고자 한다면, 앞에서 `device_name.local` 을 작성해 준 부분에 다음과 같이 ip를 직접 작성해 줘야 한다.  
 
 ```bash
 $ ssh username@xx.xx.xxx.xxx # ip address 
