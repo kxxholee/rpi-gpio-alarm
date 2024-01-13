@@ -88,5 +88,5 @@ $ sudo shutdown now
 
 ## TroubleShooting
 1. **OpenCV in C++ path error *(solved)*** : see [here](./ExampleCode/week11/README.md)  
-2. **TFLite Flatbuffer version incompatible *(solved)*** : install tflite from [this shell script](./ProjectCode), see also [this document](./ProjectCode/installScript)
+2. **TFLite Flatbuffer version incompatible *(solved)*** : install tflite from [this shell script](./ProjectCode/installScript/modified_tensorflow_2.6.0_install.sh), see also [this document](./ProjectCode/installScript)
 
