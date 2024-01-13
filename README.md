@@ -24,23 +24,14 @@
 > 		</picture>
 > 	</details>
 
-## 1. TroubleShooting
-*Example Errors*
-* [week11](./ExampleCode/week11/README.md)
+# Git
+주어진 토큰으로 이 레포지토리를 클론한 다음, 각자의 branch로 commit하세요 !!
 
-## 2. Git
+```
+$ git clone https://[ GIVEN TOKEN ]@github.com/vanillaPenguin/RaspberryPi.git
+```
 
-### Github Clone Code
-```
-$ git clone https://github.com/vanillaPenguin/RaspberryPi.git
-```
-Token과 Clone하면 push등을 할때 상당히 편해진다.  
-`https://`와 `github.com`사이에 토큰을 넣고 `@`을 마지막에 붙여 줄 수 있다
-```
-$ git clone https://[ TOKEN ]@github.com/vanillaPenguin/RaspberryPi.git
-``` 
-
-## 3. SSH
+## SSH
 라즈베리 파이는 부팅과 동시에 연결 가능한 네트워크를 찾고, 연결한다.  
 이때, 라즈베리 파이가 라우터에 포트 포워딩 되어 있거나, client기기와 같은 네트워크에 연결되어 있는 경우(내부 통신이 허용된 무선 네트워크 혹은 이더넷 케이블읉 통한 연결 등 : 이하 '같은 네트워크'), 외부에서 `ssh`를 통해서 접속할 수 있다.  
 이때, 같은 네트워크를 공유한다는 가정 하에 다음과 같은 커맨드로 연결할 수 있다. Raspberry Pi Imager를 통해 OS를 만들었다면, 그리고 사용하는 OS가 Raspberry Pi OS(혹은 Raspbian)이라면, 사용자 이름과 기기 이름은 기본값으로 각각 `pi`와 `raspberrypi`이기 때문이다.  
@@ -72,7 +63,7 @@ $ ssh username@xx.xx.xxx.xxx # ip address
 > 	* `ip a` 커맨드를 실행해서 IP를 알아낼 수 있다.  
 >   	이때 inet 옆에 xxx.xx.x.xx/xx 이런식으로 되어 있을 텐데, `/`가 나오기 이전까지가 ip 주소이다.
 
-## 4. Raspberry Pi 사용이 끝났다면
+## Raspberry Pi 사용이 끝났다면
 뭔가 진행 중이던 작업이 끝났다면 라즈베리 파이를 올바르게 종료해 주는 것도 중요하다. 터미널에서 라즈베리 파이를 종료해 주는 방법은 다음과 같다.  
 
 ```bash
@@ -90,3 +81,7 @@ $ sudo shutdown -h +5
 ```bash
 $ sudo shutdown now
 ```
+
+## TroubleShooting
+**OpenCV in C++ path error *(solved)*** : see [here](./ExampleCode/week11/README.md)
+
