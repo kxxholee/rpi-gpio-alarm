@@ -19,7 +19,7 @@
 > - 💻 Kernel Version : 6.0.19-v7l+ (32bit arm architecture)   
 > - 🌱 Board Version : RaspberryPi 4 - Model B    
 > - <details>
-> 		<summary><code> $ neofetch</code></summary>
+> 		<summary>neofetch</summary>
 > 		<picture>
 > 			<source media="(prefers-color-scheme: dark)" srcset="./assets/rasp-neofetch-dark.png">
 > 			<source media="(prefers-color-scheme: light)" srcset="./assets/rasp-neofetch-light.png">
