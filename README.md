@@ -31,7 +31,7 @@
 주어진 토큰으로 이 레포지토리를 클론한 다음, 각자의 branch로 commit하세요 !!
 
 ```
-$ git clone https://[ GIVEN TOKEN ]@github.com/vanillaPenguin/RaspberryPi.git
+$ git clone https://[ GIVEN TOKEN ]@github.com/kxxholee/RaspberryPi.git
 ```
 
 ## SSH
