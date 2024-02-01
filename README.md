@@ -4,7 +4,6 @@
   <img alt="RaspTitle" src="./assets/rasptitle-dark.png">
 </picture>
 
-------
 ### 건국대학교 전기전자공학부 - 임베디드시스템 17조
 > [!NOTE]
 > 🧑‍🏫 **담당교수**  
