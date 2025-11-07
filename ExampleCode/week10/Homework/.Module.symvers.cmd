@@ -1,1 +1,0 @@
-cmd_/home/pi/working/week10/Homework/Module.symvers := sed 's/ko$$/o/' /home/pi/working/week10/Homework/modules.order | scripts/mod/modpost -m -a  -o /home/pi/working/week10/Homework/Module.symvers -e -i Module.symvers   -T -

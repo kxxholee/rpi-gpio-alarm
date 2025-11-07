@@ -1,1 +1,0 @@
-cmd_/home/pi/working/ProjectCode/CTesting/Drivers/ledDriver.ko := ld -r -EL -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/pi/working/ProjectCode/CTesting/Drivers/ledDriver.ko /home/pi/working/ProjectCode/CTesting/Drivers/ledDriver.o /home/pi/working/ProjectCode/CTesting/Drivers/ledDriver.mod.o;  true

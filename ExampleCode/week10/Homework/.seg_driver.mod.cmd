@@ -1,1 +1,0 @@
-cmd_/home/pi/working/week10/Homework/seg_driver.mod := printf '%s\n'   seg_driver.o | awk '!x[$$0]++ { print("/home/pi/working/week10/Homework/"$$0) }' > /home/pi/working/week10/Homework/seg_driver.mod
