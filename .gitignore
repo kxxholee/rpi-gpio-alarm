@@ -1,0 +1,54 @@
+# ─── 커널 모듈 빌드 산출물 ──────────────────────────────────
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+.*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+
+# ─── CMake 빌드 산출물 ─────────────────────────────────────
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# ─── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ─── 학습 산출물 및 데이터셋 ────────────────────────────────
+# 재현 절차는 README의 "설계 변경 이력" 참조. 저장소에 포함하지 않는다.
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+dataset/
+weights/
+
+# ─── 외부 의존성 (직접 내려받거나 빌드할 것) ────────────────
+# TensorFlow Lite 헤더/정적 라이브러리는 installScript로 구성한다.
+ProjectCode/tensorflow/*
+!ProjectCode/tensorflow/README.md
+*.zip
+*.tar.gz
+*.deb
+*.udeb
+
+# ─── 입력 영상 ─────────────────────────────────────────────
+videos/
+*.mp4
+
+# ─── 편집기 및 OS ──────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
