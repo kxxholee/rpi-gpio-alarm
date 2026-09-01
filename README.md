@@ -23,31 +23,35 @@ Raspberry Pi 4B 상에서 TensorFlow Lite 객체 검출 모델과 직접 구현�
 
 ## 2. 시스템 구성
 
-```
-                  ┌──────────────────────── 사용자 공간 ────────────────────────┐
-                  │                                                             │
-   video file ───▶│  OpenCV VideoCapture ──▶ 전처리 (640px 정규화 → 300×300)    │
-                  │                                    │                        │
-                  │                                    ▼                        │
-                  │                     TFLite Interpreter (SSD MobileNet)      │
-                  │                                    │                        │
-                  │                       person 클래스 검출 계수 → N           │
-                  │                                    │                        │
-                  │       ┌────────────────────────────┼──────────────┐         │
-                  │       │ read()                     │ write()      │ write() │
-                  └───────┼────────────────────────────┼──────────────┼─────────┘
-                          │                            │              │
-                  ┌───────┼────────────────────────────┼──────────────┼─────────┐
-                  │       ▼                            ▼              ▼         │
-                  │  /dev/my_button           /dev/my_segment   /dev/my_led     │
-                  │  buttonDriver.ko          segmentDriver.ko  ledDriver.ko    │
-                  └───────┼────────────────────────────┼──────────────┼─────────┘
-                          │            커널 공간       │              │
-                  ┌───────┼────────────────────────────┼──────────────┼─────────┐
-                  │  GPIO 5, 6                  GPIO ×12         GPIO 22        │
-                  │  임계값 M 증감              4-digit 7-seg     상태 LED      │
-                  │                             (M 표시)         (N ≥ M 시 점등) │
-                  └──────────────────────── 하드웨어 ──────────────────────────┘
+```mermaid
+flowchart TB
+    video[/"영상 파일"/]
+
+    subgraph user["사용자 공간 · TermProject17"]
+        cap["OpenCV VideoCapture<br>640 px 정규화 → 300 × 300"]
+        inf["TFLite · SSD MobileNet<br>person 검출 계수 → N"]
+        cap --> inf
+    end
+
+    subgraph kern["커널 공간 · 문자 디바이스 드라이버"]
+        drvbtn["buttonDriver.ko<br>/dev/my_button"]
+        drvseg["segmentDriver.ko<br>/dev/my_segment"]
+        drvled["ledDriver.ko<br>/dev/my_led"]
+    end
+
+    subgraph hw["하드웨어 · GPIO"]
+        gbtn["버튼 ×2 · GPIO 5, 6<br>임계값 M 증감"]
+        gseg["7-세그먼트 · GPIO ×12<br>M 표시"]
+        gled["LED · GPIO 22<br>N ≥ M 시 점등"]
+    end
+
+    video --> cap
+    inf -->|"read()"| drvbtn
+    inf -->|"write()"| drvseg
+    inf -->|"write()"| drvled
+    drvbtn <--> gbtn
+    drvseg --> gseg
+    drvled --> gled
 ```
 
 프레임당 동작 절차는 다음과 같다.
