@@ -2,7 +2,7 @@
 
 202110965 이관호  
 2023/10/29  
-Github Repository : https://github.com/vanillaPenguin/RaspberryPi.git  
+Github Repository : https://github.com/kxxholee/RaspberryPi  
 
 ### 0.주제
 

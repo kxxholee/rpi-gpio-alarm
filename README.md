@@ -85,21 +85,21 @@ Raspberry Pi 4B 상에서 TensorFlow Lite 객체 검출 모델과 직접 구현�
 ## 5. 저장소 구조
 
 ```
-├── ProjectCode/              최종 제출 구현
-│   ├── main.cpp              추론 루프 및 디바이스 제어
-│   ├── CMakeLists.txt        응용 빌드 정의
-│   ├── Drivers/              GPIO 문자 디바이스 드라이버 3종 + Kbuild Makefile
-│   ├── model/model.tflite    SSD MobileNet 검출 모델
-│   ├── installScript/        TFLite 2.6.0 의존성 설치 스크립트 (수정본)
-│   └── tensorflow/           TFLite 헤더·라이브러리 배치 위치 (저장소 미포함)
-├── ProjectCode-old/          1차 접근의 학습 파이프라인 (7절 참조)
-├── ExampleCode/              주차별 실습 코드
-│   ├── week07/               mmap 기반 GPIO 직접 제어
-│   ├── week10/               문자 디바이스 드라이버, 7-세그먼트
-│   ├── week11/               OpenCV 카메라 입출력
-│   └── week12/               TFLite 객체 검출 예제
-├── Documents/                주차별 보고서 및 학습용 노트북
-└── Memo/                     PC–보드 간 연결 방식에 대한 조사 기록
+├── ProjectCode/                최종 제출 구현
+│   ├── main.cpp                추론 루프 및 디바이스 제어
+│   ├── CMakeLists.txt          응용 빌드 정의
+│   ├── Drivers/                GPIO 문자 디바이스 드라이버 3종 + Kbuild Makefile
+│   ├── model/model.tflite      SSD MobileNet 검출 모델
+│   ├── installScript/          TFLite 2.6.0 의존성 설치 스크립트 (수정본)
+│   └── tensorflow/             TFLite 헤더·라이브러리 배치 위치 (저장소 미포함)
+├── EyeStateClassifier/         1차 접근의 학습 파이프라인 — 폐기 (7.1절)
+├── ExampleCode/                주차별 실습 코드
+│   ├── week07/                 mmap 기반 GPIO 직접 제어
+│   ├── week10/                 문자 디바이스 드라이버, 7-세그먼트
+│   ├── week11/                 OpenCV 카메라 입출력
+│   └── week12/                 TFLite 객체 검출 예제
+├── Documents/                  주차별 보고서 및 학습용 노트북
+└── Memo/                       PC–보드 간 연결 방식에 대한 조사 기록
 ```
 
 ## 6. 빌드 및 실행
@@ -161,7 +161,7 @@ sudo rmmod ledDriver segmentDriver buttonDriver
 
 초기 설계는 운전자 졸음 감지를 목표로 하였다. dlib의 68점 얼굴 랜드마크 검출기로 눈 영역을
 추출한 뒤, 26 × 34 흑백 영상을 입력받아 눈의 개폐 여부를 판별하는 이진 분류 CNN을 직접
-학습시키는 구성이었다. 해당 파이프라인은 `ProjectCode-old/`에 남아 있다.
+학습시키는 구성이었다. 해당 파이프라인은 `EyeStateClassifier/`에 남아 있다.
 
 | 파일 | 역할 |
 |---|---|
@@ -233,7 +233,7 @@ for (int i = 0; i < size; ++i) { ... }
 
 - `ProjectCode/tensorflow/` — TFLite 헤더 및 정적 라이브러리 (6.1절의 설치 스크립트로 구성)
 - `videos/` — 입력 영상
-- `ProjectCode-old/dataset/`, `ProjectCode-old/weights/` — 1차 접근의 학습 데이터 및 가중치
+- `EyeStateClassifier/dataset/`, `EyeStateClassifier/weights/` — 1차 접근의 학습 데이터 및 가중치
 
 ## 9. 참고 자료
 
