@@ -2,7 +2,7 @@
 
 202110965 이관호  
 2023/10/29  
-Github Repository : https://github.com/kxxholee/RaspberryPi  
+Github Repository : https://github.com/kxxholee/rpi-gpio-alarm  
 
 ### 0.주제
 
